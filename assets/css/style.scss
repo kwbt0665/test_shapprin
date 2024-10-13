@@ -644,8 +644,8 @@ header{
 }
 .hdCmn{
 	@include transition-normal-06;
-	padding: 20px;
-	height: 90px;
+	padding: 15px;
+	height: 80px;
 	@media (max-width: 1062px){
 	    @include transition-normal-04;
 		padding: 10px;
@@ -2152,8 +2152,8 @@ footer{
 .pages{
 	.page_title{
 		background-color: $myGreen;
-		margin-top: 90px;
-		padding: 100px 0;
+		margin-top: 80px;
+		padding: 120px 0;
 		@media (max-width: 1060px){
 			margin-top: 60px;
 		}
@@ -2164,7 +2164,7 @@ footer{
 			padding: 10% 0;
 		}
 		@media (max-width: 374px){
-			padding: 40px 0;
+			padding: 60px 0;
 		}
 		h1{
 			@include ft_page_title;
