@@ -1182,47 +1182,48 @@ footer{
 /*--------------トップページ-----------------*/
 .hero{
 	font-family: $base_font;
-	/*--------------pc-----------------*/
-	.hero_pc{
-		background-image: url(../img/main_img_pc.jpg);
-		background-position: bottom center;
-		background-size: cover;
+	.animation-container {
+		position: relative;
 		width: 100%;
-		height: 50rem;
-		padding: 8.75rem 0;
-		@media (max-width: 1062px){
-		    display: none;
+		padding-top: 57%;
+		@media (max-width: 650px){
+			padding-top: 112%;
 		}
-		.fv_block{
-			width: 95%;
-		}
-		h1{
-			margin-top: 5rem;
-			margin-bottom: 5.625rem;
-			// margin-left: -2.1875rem;
-			@media (max-width: 1300px){
-				margin-top: 3rem;
+		.img01, .img02 {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top:0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background-position: center center;
+			background-size: cover;
+			background-repeat: no-repeat;
+		 }
+		.img01 {
+			animation: toggleVisibility 2s infinite;
+			background-image: url(../img/topimg_01.jpg);
+			z-index: 2;
+			@media (max-width: 650px){
+				background-image: url(../img/topimg_01_sp.jpg);
 			}
-			img{
-				display: inline-block;
-				width: 100%;
-			}
 		}
-		.txt_catch{
-			color: $myBlack;
-            font-size: 2.75rem;
-			font-weight: 700;
-			letter-spacing: 0.025rem;
-			line-height: 1;
-			text-align: center;
-			@media (max-width: 1300px){
-				font-size: 2.5rem;
+		.img02 {
+			background-image: url(../img/topimg_02.jpg);
+			z-index: 1;
+			@media (max-width: 650px){
+				background-image: url(../img/topimg_02_sp.jpg);
 			}
 		}
 		.appLink{
+			position: absolute;
+			top: 60px;
+			right: 40px;
+			z-index: 3;
 			text-align: center;
 			margin: 0 auto;
-			max-width: 600px;
+			max-width: 440px;
 			nav{
 				display: flex;
 				padding: 0;
@@ -1235,65 +1236,23 @@ footer{
 					padding: 0 2.9375rem 0 0.625rem;
 				}
 			}
-		}
-	}
-
-	/*--------------sp-----------------*/
-	.hero_sp {
-		display: none;
-		max-width: 100%;
-		@media (max-width: 1062px){
-			display: block;
-		}
-		.hero_sp_top{
-			height: 43rem;
-			background-image: url(../img/main_img_sp_wide.jpg);
-			background-position: bottom center;
-			background-size: cover;
-			padding: 30px 0 30px 40px;
-			@media (max-width: 650px){
-				background-image: url(../img/main_img_sp.jpg);
-				padding: 50px 0 30px 30px;
-			}
-			@media (max-width: 540px){
-				height: 29rem;
-				padding: 30px 0 30px 30px;
-			}
-			h1{
-				img{
-					display: inline-block;
-					max-width: 400px;
-					@media (max-width: 650px){
-						max-width: 380px;
-					}
-					@media (max-width: 540px){
-						max-width: 240px;
-					}
-				}
-			}
-			.txt_catch{
-				color: $myBlack;
-				font-size: 1.5rem;
-				font-weight: 700;
-				letter-spacing: 0.025em;
-				line-height: 1.3;
-				max-width: 480px;
-				text-align: left;
-				margin: 1.25rem 0 0 0;
-				@media (max-width: 1062px){
-					font-size: 2.5rem;
-					max-width: 600px;
-				}
-				@media (max-width: 730px){
-					font-size: 2.5rem;
-				}
-				@media (max-width: 600px){
-					font-size: 1.7rem;
-				}
+			@media (max-width: 1062px){
+	 	    	display: none;
 			}
 		}
-	}
+	 }
+	 @keyframes toggleVisibility {
+		0%, 49% {
+		  opacity: 1;
+		  transform: scale(1); /* Visible */
+		}
+		50%, 100% {
+		  opacity: 0;
+		  transform: scale(0); /* Hidden */
+		}
+	 }
 }
+
 /*-------------- Feature -----------------*/
 .feature_top{
 	font-family: $base_font;
@@ -2429,9 +2388,9 @@ footer{
 				&:hover{
 					@media (min-width: 768px){
 						.acrdBox{
-							background-color: purple_light;
+							background-color: $myIvory;
 							&.active{
-								background-color: #fff;
+								background-color: $myIvory;
 							}
 						}
 					}
@@ -2508,7 +2467,7 @@ footer{
 									margin-bottom: 0;
 								}
 								a{
-									color: $myGreen;
+									color: $myPink;
 									text-decoration: underline;
 									font-weight: 500;
 								}
@@ -2524,6 +2483,9 @@ footer{
 										margin: auto;
 									}
 								}
+							}
+							b{
+								color: $myGreen;
 							}
 							.acrd_cont_box01{
 								padding-bottom: 20px;
