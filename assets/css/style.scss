@@ -1517,7 +1517,7 @@ footer{
 	font-family: $base_font;
 	width: 100%;
 	padding: 120px 0;
-	height: 80rem;
+	height: 85rem;
 	background-color: $myPink;
 	.print_wbox{
 		max-width: 1280px;
@@ -1720,13 +1720,14 @@ footer{
 			}
 	}
 	.price_table {
-		margin-top: 35rem;
-		width: 100%;
+		margin: 35rem auto 0;
+		width: 85%;
 		text-align: center;
 		border-collapse: collapse;
 		border-spacing: 0;
 		th{
-			padding: 10px;
+			text-align: center;
+			padding: 22px 10px;
 			background: #000;
 			color: #fff;
 			border: solid 1px $myPink;
@@ -1735,7 +1736,20 @@ footer{
 			padding: 10px;
 			background: #fff;
 			color: #000;
+			font-size: 2.5rem;
 			border: solid 1px $myPink
+		}
+		.txt_L{
+			font-size: 1.625rem
+		}
+		.txt_M{
+			font-size: 1.5rem; 
+		}
+		.txt_S{
+			font-size: 1.125rem; 
+		}
+		span{
+			font-size: 1.25rem;
 		}
 	}
 
@@ -1751,7 +1765,7 @@ footer{
 .step{
 	font-family: $base_font;
 	width: 100%;
-	padding: 100px 100px 150px;
+	padding: 120px 100px 120px;
 	background-color: $myDeepGreen;
 	margin: 0 auto;
 	@media (max-width: 1100px){
@@ -1847,7 +1861,7 @@ footer{
 /*-------------- news -----------------*/
 .news {
 	font-family: $base_font;
-	padding: 100px 0 150px;
+	padding: 120px 0 120px;
 	background-color: $myPurple;
 	margin: 0 auto;
 	@media (max-width: 540px){
@@ -1874,7 +1888,7 @@ footer{
 			font-weight: 500;
 		}
 		dd{
-			color: $myBlack;
+			color: #3d3d3d;
 			font-size: 1rem;
 			font-weight: 500;
 		}
@@ -1966,7 +1980,7 @@ footer{
 /*-------------- store -----------------*/
 .store{
 	font-family: $base_font;
-	padding: 100px 0 150px;
+	padding: 120px 0 120px;
 	background-color: #fff;
 	@media (max-width: 540px){
 		padding: 60px 0 80px;
@@ -1978,7 +1992,7 @@ footer{
 	.shop_list{
 		max-width: 800px;
 		margin: auto;
-		margin-bottom: 60px;
+		margin-bottom: 80px;
 		@media (max-width: 991px){
 			margin-bottom: 40px;
 		}

@@ -1188,7 +1188,7 @@ footer .copy {
   font-family: "Murecho", sans-serif;
   width: 100%;
   padding: 120px 0;
-  height: 80rem;
+  height: 85rem;
   background-color: #ED839F;
 }
 .print_price .print_wbox {
@@ -1395,14 +1395,15 @@ footer .copy {
   }
 }
 .print_price .print_wbox .price_table {
-  margin-top: 35rem;
-  width: 100%;
+  margin: 35rem auto 0;
+  width: 85%;
   text-align: center;
   border-collapse: collapse;
   border-spacing: 0;
 }
 .print_price .print_wbox .price_table th {
-  padding: 10px;
+  text-align: center;
+  padding: 22px 10px;
   background: #000;
   color: #fff;
   border: solid 1px #ED839F;
@@ -1411,14 +1412,27 @@ footer .copy {
   padding: 10px;
   background: #fff;
   color: #000;
+  font-size: 2.5rem;
   border: solid 1px #ED839F;
+}
+.print_price .print_wbox .price_table .txt_L {
+  font-size: 1.625rem;
+}
+.print_price .print_wbox .price_table .txt_M {
+  font-size: 1.5rem;
+}
+.print_price .print_wbox .price_table .txt_S {
+  font-size: 1.125rem;
+}
+.print_price .print_wbox .price_table span {
+  font-size: 1.25rem;
 }
 
 /*-------------- step -----------------*/
 .step {
   font-family: "Murecho", sans-serif;
   width: 100%;
-  padding: 100px 100px 150px;
+  padding: 120px 100px 120px;
   background-color: #1bbc9d;
   margin: 0 auto;
 }
@@ -1578,7 +1592,7 @@ footer .copy {
 /*-------------- news -----------------*/
 .news {
   font-family: "Murecho", sans-serif;
-  padding: 100px 0 150px;
+  padding: 120px 0 120px;
   background-color: #B49ADB;
   margin: 0 auto;
 }
@@ -1627,7 +1641,7 @@ footer .copy {
   font-weight: 500;
 }
 .news .information dd {
-  color: #000000;
+  color: #3d3d3d;
   font-size: 1rem;
   font-weight: 500;
 }
@@ -1731,7 +1745,7 @@ footer .copy {
 /*-------------- store -----------------*/
 .store {
   font-family: "Murecho", sans-serif;
-  padding: 100px 0 150px;
+  padding: 120px 0 120px;
   background-color: #fff;
 }
 @media (max-width: 540px) {
@@ -1764,7 +1778,7 @@ footer .copy {
 .store .shop_list {
   max-width: 800px;
   margin: auto;
-  margin-bottom: 60px;
+  margin-bottom: 80px;
 }
 @media (max-width: 991px) {
   .store .shop_list {
