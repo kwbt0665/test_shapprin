@@ -39,7 +39,7 @@ $myGray:#565050;
 // }
 
 @mixin ft_title{
-	font-size: 50px;
+	font-size: 47px;
 	font-weight: 500;
 	line-height: 1;
 	letter-spacing: 0.05em;
@@ -47,7 +47,7 @@ $myGray:#565050;
 	margin-bottom: 80px;
 	@media (max-width: 1062px){
 		letter-spacing: 0.1rem;
-		font-size: 25px;
+		font-size: 20px;
 		margin-bottom: 40px;
 		font-weight: 600;
 	}
@@ -1302,15 +1302,16 @@ footer{
 		&.txt_wh{
 			color: $myWhite !important;
 		}
-		@media (max-width: 1160px){
-			font-size: 3rem;
+		@media (max-width: 1062px){
+			font-size: 2.5rem;
+			margin: 2rem 0; 
 		}
 		@media (max-width: 540px){
-			font-size: 2.5rem;
-		}
-		@media (max-width: 470px){
-			font-size: 1.4375rem;
+			font-size: 2rem;
 			margin: 0 0 1.875rem 0;
+		}
+		@media (max-width: 376px){
+			font-size: 1.5rem;
 		}
 	}
 	.sub_title{
@@ -1320,15 +1321,16 @@ footer{
 			line-height: 1.6;
 			letter-spacing: 0.05em;
 			margin: 5rem 0; 
-			@media (max-width: 1160px){
-				font-size: 3rem;
+			@media (max-width: 1062px){
+				font-size: 1.7rem;
+				margin: 2rem 0; 
 			}
 			@media (max-width: 540px){
-				font-size: 2.5rem;
+				font-size: 1.4rem;
+				margin: 0 0 0 0; 
 			}
-			@media (max-width: 470px){
-				font-size: 1.4375rem;
-				margin: 0 0 1.875rem 0;
+			@media (max-width: 376px){
+				font-size: 1.125rem;
 			}
 		}
 	.feature_txt{
@@ -1355,7 +1357,10 @@ footer{
 	font-family: $base_font;
 	background-color: $myIvory;
 	width: 100%;
-	padding: 120px 0;
+	padding: 120px 20px;
+	@media (max-width: 1160px){
+		padding: 60px 20px;
+	}
 	.first_block{
 			max-width: 1280px;
 			margin: 0 auto;
@@ -1371,15 +1376,26 @@ footer{
 			@media (max-width: 470px){
 
 			}
-			img{
-				width: 615px;
-				@media (max-width: 1160px){
-					width: 120px;
+			.feature_img_sp{
+				display: none;
+				@media (max-width: 540px){
+					display: block;
+					margin: 60px 0;
+					img{
+						width: 100%;
+					}
 				}
-				@media (max-width: 470px){
-					width: 70px;
+			}
+			.feature_img_pc{
+				max-width: 615px;
+				display: block;
+				@media (max-width: 1062px){
+					width: 70%;
 				}
-		}
+				@media (max-width: 540px){
+					display: none;
+				}
+			}
 	}
 }
 
@@ -1388,9 +1404,13 @@ footer{
 	background-color: $myYellow;
 	width: 100%;
 	padding: 120px 0;
+	@media (max-width: 1160px){
+		padding: 60px 0;
+	}
 	.second_box{
 		max-width: 1280px;
 		margin: 0 auto;
+		padding: 0 20px;
 	}
 	.second_box_point{
 		max-width: 1080px;
@@ -1401,19 +1421,30 @@ footer{
 		padding: 25px 40px;
 		border-radius: 20px;
 		background-color: #fff;
-		@media (max-width: 1062px){
+		@media (max-width: 760px){
 			display: block;
+			padding: 30px 20px 40px;
 			width: 90%;
-			margin: 0 50px;
 		}
 		.point_img{
 			width: 11.5%;
+			@media (max-width: 760px){
+				margin: 0 auto 30px;
+				width: 30%;
+			}
 		}
 		.point_txt{
 			width: 85%;
 			font-size: 1.125rem;
 			line-height: 2;
 			font-weight: 400;
+			@media (max-width: 760px){
+				width: 100%;
+				letter-spacing: -0.01rem;
+			}
+			@media (max-width: 540px){
+				font-size: 0.8125rem;
+			}
 		}
 	}
 	// splide.min.css overwrite
@@ -1443,10 +1474,14 @@ footer{
 	font-family: $base_font;
 	background-color: $myAquablue;
 	width: 100%;
-	padding: 120px 0;
+	padding: 120px 0px;
+	@media (max-width: 1160px){
+		padding: 60px 0;
+	}
 	.third_box{
-		width: 1280px;
+		max-width: 1280px;
 		margin: 0 auto;
+		padding: 0 20px;
 	}
 	.third_box_point{
 		width: 90%;
@@ -1516,7 +1551,7 @@ footer{
 	position: relative;
 	font-family: $base_font;
 	width: 100%;
-	padding: 120px 0;
+	padding: 120px 20px;
 	height: 85rem;
 	background-color: $myPink;
 	.print_wbox{
@@ -1725,6 +1760,9 @@ footer{
 		text-align: center;
 		border-collapse: collapse;
 		border-spacing: 0;
+		@media (max-width: 640px){
+			display: none;
+		}
 		th{
 			text-align: center;
 			padding: 22px 10px;
