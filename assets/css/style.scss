@@ -76,7 +76,7 @@ $myGray:#565050;
 /* -------- Btn -------- */
 
 @mixin normal_btn{
-	line-height: 70px;
+//	line-height: 70px;
 	font-weight: 500;
 	font-size: 1.25rem;
 	letter-spacing: 0.05em;
@@ -511,8 +511,15 @@ img{
 
 .pc_br{
 	display: block;
-	@media (max-width: 1160px){
+	@media (max-width: 540px){
 		display: none;
+	}
+}
+
+.sp_br{
+	display: none;
+	@media (max-width: 540px){
+		display: block;
 	}
 }
 
@@ -1444,6 +1451,7 @@ footer{
 			}
 			@media (max-width: 540px){
 				font-size: 0.8125rem;
+				line-height: 1.5;
 			}
 		}
 	}
@@ -1490,28 +1498,60 @@ footer{
 		justify-content: center;
 		align-items: stretch;
 		gap: 54px;
-		@media (max-width: 1062px){
+		@media (max-width: 900px){
 			display: block;
 			margin: 0 auto;
 		}
 		li{
+			width: 22.8%;
+			padding: 40px 20px 50px;
 			border-radius: 36px;
 			background-color: #fff;
-			padding: 40px 20px 50px;
-			width: 22.8%;
-			@media (max-width: 1062px){
+			@media (max-width: 1440px){
+				width: 30%;
+			}
+			@media (max-width: 900px){
 				width: 100%;
-				margin-bottom: 20px;
+				padding: 30px 20px;
+				margin-bottom: 30px;
+				border-radius: 20px;
+				&:last-child{
+					margin-bottom: 0;
+				}
 			}
 			.point_img{
-				width: 135px;
-				margin: 0 auto;
-			}
-			.point_title{
 				text-align: center;
-				font-size: 1.5rem;
-				font-weight: 600;
-				margin: 30px 0;
+				img{
+					width: 135px;
+				}
+				.point_title{
+					text-align: center;
+					font-size: 1.5rem;
+					font-weight: 600;
+					margin: 30px 0;
+
+				}
+				@media (max-width: 1440px){
+					.point_title{
+						font-size: 1.3rem;
+					}
+				}
+				@media (max-width: 540px){
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+					margin: 0 0 20px 0;
+					img{
+						width: 23%;
+					}
+					.point_title{
+						width: 72%;
+						text-align: left;
+						font-size: 1.25rem;
+						letter-spacing: -0.01rem;
+						margin: 0;
+					}
+				}
 			}
 			.point_txt{
 				text-align: left;
@@ -1519,28 +1559,20 @@ footer{
 				line-height: 1.8;
 				font-weight: 400;
 				letter-spacing: -0.05em;
+				@media (max-width: 540px){
+					font-size: 0.8125rem;
+				}
 			}
 		}
 	}
-	// splide.min.css overwrite
+		// splide.min.css overwrite
 	.splide{
 		padding: 100px 0;
 		.splide__list{
 			align-items: flex-end;
-			// li{
-			// 	&:first-child{
-			// 		width: 560px;
-			// 	}
-			// 	&::nth-child(2){
-			// 		width: 400px;
-			// 	}
-			// 	&::nth-child(3){
-			// 		width: 410px;
-			// 	}
-			// 	&:last-child{
-			// 		width: 400px;
-			// 	}
-			// }
+		}
+		@media (max-width: 540px){
+			padding: 60px 0;
 		}
 	}
 }
@@ -1554,11 +1586,28 @@ footer{
 	padding: 120px 20px;
 	height: 85rem;
 	background-color: $myPink;
+	@media (max-width: 540px){
+		padding: 60px 20px;
+		height: auto;
+	}
 	.print_wbox{
 		max-width: 1280px;
 		margin: 0 auto;
 		.price_Box{
 			display: block;
+		}
+		h2{
+			@include ft_title;
+			color: #fff;
+			text-align: left;
+			margin-bottom: 50px;
+			@media (max-width: 900px){
+				margin-bottom: 40px;
+			}
+			@media (max-width: 540px){
+				margin-bottom: 30px;
+				font-size: 1.25rem;
+			}
 		}
 		.price_flex{
 			position: absolute;
@@ -1576,6 +1625,7 @@ footer{
 			}
 			@media (max-width: 540px){
 				display: block;
+				margin: 60px 0 0 0;
 			}
 			li{
 				// ----- pc image-size -----
@@ -1646,37 +1696,32 @@ footer{
 					&:first-child{
 						width: 100%;
 						img{
-							width: 34%;
+							width: 38.7%;
 						}
 					}
 					&:nth-child(2){
 						width: 100%;
 						img{
-							width: 48%;
+							width: 54.8%;
 						}
 					}
 					&:nth-child(3){
 						width: 100%;
 						img{
-							width: 48%;
+							width: 44.7%;
 						}
 					}
 					&:nth-child(4){
 						width: 100%;
 						img{
-							width: 85%;
-						}
-					}
-					&:nth-child(5){
-						width: 100%;
-						img{
-							width: 48%;
+							width: 56.6%;
 						}
 					}
 					&:last-child{
+						margin-bottom: 0;
 						width: 100%;
 						img{
-							width: 48%;
+							width: 93.5%;
 						}
 					}
 				}
@@ -1687,7 +1732,6 @@ footer{
 					.price_detail_flex{
 						display: flex;
 						justify-content: space-around;
-						align-items: center;
 						.side_img_sp{
 							width: 50%;
 						}
@@ -1706,16 +1750,16 @@ footer{
 					line-height: 1;
 					letter-spacing: 0.075em;
 					margin: 30px 0;
-					@media (max-width: 375px){
-						font-size: 1.125rem;
-						margin: 10px 0;
+					@media (max-width: 540px){
+						font-size: 1.5rem;
+						margin: 0 0 10px 0;
 					}
 				}
 				.size_box{
 					padding: 15px 0;
 					margin: 0 auto;
 					border-top: 1px solid #fff;
-					@media (max-width: 375px){
+					@media (max-width: 540px){
 						padding: 10px 0;
 					}
 					.size_txt{
@@ -1725,30 +1769,43 @@ footer{
 						text-align: left;
 						line-height: 1.3;
 						letter-spacing: 0.1em;
-						@media (max-width: 375px){
+						@media (max-width: 540px){
 							font-size: 0.875rem;
 							line-height: 1.5;
 						}
 					}
 				}
-				.price_txt{
+				//only SP
+				.price_txt_box{
 					display: none;
-					color: #FFF;
-					font-size: 2.5rem;
-					font-weight: 500;
-					line-height: 1;
-					letter-spacing: 0.075em;
-					margin: 15px 0 0 0;
-					@media (max-width: 1062px){
+					@media (max-width: 540px){
 						display: block;
-						font-size: 1.875rem;
-						margin: 10px 0 0 0;
+						border-top: 1px solid #fff;
+						padding-top: 10px;
 					}
-					span{
-						font-size: 1.875rem;
-						vertical-align: 0.4rem;
-						@media (max-width: 375px){
-							font-size: 1.25rem;
+					.price_txt{
+						color: #FFF;
+						font-size: 0.875rem;
+						letter-spacing: 0.075em;
+						text-align: left;
+						.ml35{
+							font-size: 1.1875rem;
+							font-weight: 500;
+							margin-left: 3.5rem;
+						}
+						.ml25{
+							font-size: 1.1875rem;
+							font-weight: 500;
+							margin-left: 2.5rem;
+						}
+						.ml16{
+							font-size: 1.1875rem;
+							font-weight: 500;
+							margin-left: 1.6rem;
+						}
+						em{
+							font-style: normal;
+							font-size: 0.5625rem;
 						}
 					}
 				}
@@ -1807,23 +1864,23 @@ footer{
 	background-color: $myDeepGreen;
 	margin: 0 auto;
 	@media (max-width: 1100px){
-		padding: 60px 40px 80px;
+		padding: 60px 40px 60px;
 	}
 	@media (max-width: 540px){
-		padding: 60px 20px 80px;
+		padding: 60px 20px 60px;
 	}
 	@media (max-width: 375px){
-		padding: 60px 10px 80px;
+		padding: 60px 10px 60px;
 	}
 	.stepBox_btn{
 		@include normal_btn;
-		margin: 40px 0 0 0;
+		margin: 60px 0 0 0;
 		text-align: center;
 		a{
 			background-image: url(../img/arrow_circle_right.svg);
 		}
 	}
-	h1{
+	h2{
 		@include ft_title;
 		color: #fff;
 		@media (max-width: 900px){
@@ -1867,9 +1924,9 @@ footer{
 			width: 100%;
 			.stepBoxImg {
                 width: 50%;
-				@media (max-width: 540px){
-					width: 75%;
-				}
+			}
+			.stepBoxTxt{
+			    width: 50%;
 			}
 		}
 	    .stepBox_sp_txt{
@@ -1877,7 +1934,7 @@ footer{
 			color: #fff;
 			font-size: 1rem;
 		    font-weight: 600;
-			width: 75%;
+			width: 95%;
 			@media (max-width: 540px){
 				font-size: 0.875rem;
 			}
@@ -1887,10 +1944,10 @@ footer{
 			padding: 10px;
 		}
 	    .arrow{
-			margin: 20px auto;
+			margin: 30px auto;
 			width: 40px;
-			@media (max-width: 374px){
-				width: 30px;
+			@media (max-width: 376px){
+				width: 28px;
 			}
 	    }
 	}
@@ -1903,9 +1960,9 @@ footer{
 	background-color: $myPurple;
 	margin: 0 auto;
 	@media (max-width: 540px){
-		padding: 60px 0 100px;
+		padding: 60px 0 60px;
 	}
-	h1 {
+	h2 {
 		@include ft_title;
 		color: #fff;
 	}
@@ -1922,12 +1979,12 @@ footer{
 		border-radius: 15px;
 		dt {
 			color: #666666;
-			font-size: 1rem;
+			font-size: 0.875rem;
 			font-weight: 500;
 		}
 		dd{
 			color: #3d3d3d;
-			font-size: 1rem;
+			font-size: 0.875rem;
 			font-weight: 500;
 		}
 		&:hover{
@@ -1976,9 +2033,6 @@ footer{
 				margin-bottom: 6px;
 				line-height: 1;
 			}
-			@media (max-width: 767px){
-                font-size: 0.7rem;
-			}
 		}
 		dd{
 			float: left;
@@ -1986,9 +2040,6 @@ footer{
 			text-align: left;
 			@media (max-width: 983px){
 				width: 100%;
-			}
-			@media (max-width: 767px){
-                font-size: 0.7rem;
 			}
 		}
 	}
@@ -2000,16 +2051,13 @@ footer{
 		}
 		a {
 			color: #fff;
-			font-size: 1rem;
+			font-size: 0.875rem;
 			font-weight: 500;
 			letter-spacing: 0.1em;
-			padding: 0 5px 10px 5px;
+			padding: 0 0 5px 0;
 			border-bottom: solid 1px #fff;
 			&:hover {
 				opacity: 0.5;
-			}
-			@media (max-width: 767px){
-                font-size: 1rem;
 			}
 		}
 	}
@@ -2021,9 +2069,9 @@ footer{
 	padding: 120px 0 120px;
 	background-color: #fff;
 	@media (max-width: 540px){
-		padding: 60px 0 80px;
+		padding: 60px 0 60px;
 	}
-	h1{
+	h2{
 		@include ft_title;
 		color: $myBlack;
 	}
