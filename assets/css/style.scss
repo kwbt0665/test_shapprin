@@ -76,10 +76,17 @@ $myGray:#565050;
 /* -------- Btn -------- */
 
 @mixin normal_btn{
-//	line-height: 70px;
+	line-height: 70px;
 	font-weight: 500;
 	font-size: 1.25rem;
 	letter-spacing: 0.05em;
+	@media (max-width: 760px){
+		font-size: 1rem;
+	}
+	@media (max-width: 540px){
+		line-height: 30px;
+		font-size: 0.875rem;
+	}
 		a{
 			padding: 0 80px 0 60px;
 			background-color: #fff;
@@ -115,9 +122,7 @@ $myGray:#565050;
 			// 	background-position: right 50px center;
 			// 	background-size: 14px 14px;
 			// }
-			@media (max-width: 470px){
-				line-height: 30px;
-				font-size: 0.875rem;
+			@media (max-width: 540px){
 				padding: 0.5rem 3rem;
 				background-position: right 30px center;
 				background-size: 14px 14px;
@@ -751,22 +756,22 @@ header{
 							background-image: url(../img/icon_menu_use.svg);
 						}
 						&.mfp{
-							background-image: url(../img/icon_menu_mfp.svg);
+							background-image: url(../img/spmenu_icon_print.svg);
 						}
 						&.faq{
-							background-image: url(../img/icon_menu_faq.svg);
+							background-image: url(../img/spmenu_icon_qa.svg);
 						}
 						&.shop{
-							background-image: url(../img/icon_menu_shop.svg);
+							background-image: url(../img/spmenu_icon_search.svg);
 						}
 						&.photo{
 							margin-top: 20px;
 							display: block !important;
-							background-image: url(../img/icon_menu_photo.svg);
+							background-image: url(../img/spmenu_icon_designframe.svg);
 						}
 						&.calendar{
 							display: block !important;
-							background-image: url(../img/icon_menu_calendar.svg);
+							background-image: url(../img/spmenu_icon_calendar.svg);
 						}
 						&:last-child{
 							 margin: 0;
@@ -1224,27 +1229,42 @@ footer{
 				background-image: url(../img/topimg_02_sp.jpg);
 			}
 		}
+		.sp_obi{
+			display :none;
+			@media (max-width: 650px){
+				display: block;
+				position: absolute;
+				width: 100%;
+				bottom: -5.5%;
+				left: 0;
+				z-index: 3;
+			}
+		}
 		.appLink{
 			position: absolute;
-			top: 60px;
-			right: 40px;
+			top: 6%;
+			right: 4%;
 			z-index: 3;
 			text-align: center;
 			margin: 0 auto;
 			max-width: 440px;
+			@media (max-width: 1062px){
+				top: 3.2%;
+				right: 12%;
+		   }
 			nav{
 				display: flex;
 				padding: 0;
 				.for_ios{
-					width: 100%;
-					padding: 0 0.625rem 0 2.9375rem;
+					width: 14vw;
+					padding: 0 0.625rem 0 0;
 				}
 				.for_android{
-					width: 100%;
-					padding: 0 2.9375rem 0 0.625rem;
+					width: 14vw;
+					padding: 0 0 0 0.625rem;
 				}
 			}
-			@media (max-width: 1062px){
+			@media (max-width: 650px){
 	 	    	display: none;
 			}
 		}
@@ -1263,7 +1283,7 @@ footer{
 
 .appbox{
 	display: none;
-	@media (max-width: 1062px){
+	@media (max-width: 650px){
 		display: block;
 		font-family: $base_font;
 		background-color: $myGreen;
@@ -1290,7 +1310,12 @@ footer{
 				padding: 30px 20px 40px;
 				max-width: 260px;					
 				@media (max-width: 540px){
-					padding: 30px 10px 40px;
+					&.for_ios{
+						padding: 30px 10px 40px 20px;
+					}
+					&.for_android{
+						padding: 30px 20px 40px 10px;
+					}
 				}
 			}
 		}	
@@ -1301,7 +1326,7 @@ footer{
 .toppage{
 	.main_title{
 		color: $myBlack;
-		font-size: 2.93rem;
+		font-size: 2.9375rem;
 		font-weight: 600;
 		line-height: 1.6;
 		letter-spacing: 0.05em;
@@ -1327,7 +1352,7 @@ footer{
 			font-weight: 600;
 			line-height: 1.6;
 			letter-spacing: 0.05em;
-			margin: 5rem 0; 
+			margin: 3.75rem 0 5rem; 
 			@media (max-width: 1062px){
 				font-size: 1.7rem;
 				margin: 2rem 0; 
@@ -1338,13 +1363,15 @@ footer{
 			}
 			@media (max-width: 376px){
 				font-size: 1.125rem;
+				letter-spacing: -0.01rem;
 			}
 		}
 	.feature_txt{
 		color: $myBlack;
-		font-size: 1.375rem;
+		font-size: 1.5rem;
 		line-height: 1.6;
 		font-weight: 500;
+		letter-spacing: -0.01rem;
 		&.txt_wh{
 			color: $myWhite !important;
 		}
@@ -1354,8 +1381,8 @@ footer{
 		@media (max-width: 540px){
 			font-size: 1rem;
 		}
-		@media (max-width: 470px){
-			font-size: 1rem;
+		@media (max-width: 376px){
+			font-size: 0.875rem;
 		}
 	}
 }
@@ -1436,18 +1463,18 @@ footer{
 		.point_img{
 			width: 11.5%;
 			@media (max-width: 760px){
-				margin: 0 auto 30px;
-				width: 30%;
+				margin: 0 auto 20px;
+				width: 19vw;
 			}
 		}
 		.point_txt{
 			width: 85%;
 			font-size: 1.125rem;
 			line-height: 2;
-			font-weight: 400;
+			font-weight: 500;
+			letter-spacing: -0.01rem;
 			@media (max-width: 760px){
 				width: 100%;
-				letter-spacing: -0.01rem;
 			}
 			@media (max-width: 540px){
 				font-size: 0.8125rem;
@@ -1458,22 +1485,20 @@ footer{
 	// splide.min.css overwrite
 	.splide{
 		padding: 100px 0;
+		@media (max-width: 540px){
+			padding: 60px 0;
+		}
 		.splide__list{
 			align-items: flex-end;
-			// li{
-			// 	&:first-child{
-			// 		width: 560px;
-			// 	}
-			// 	&::nth-child(2){
-			// 		width: 400px;
-			// 	}
-			// 	&::nth-child(3){
-			// 		width: 410px;
-			// 	}
-			// 	&:last-child{
-			// 		width: 400px;
-			// 	}
-			// }
+		}
+		.splide__slide{
+			width: 28.5% !important;
+			@media (max-width: 1062px){
+				width: 36% !important; 
+			}
+			@media (max-width: 540px){
+				width: 50.7% !important; 
+			}
 		}
 	}
 }		
@@ -1511,6 +1536,10 @@ footer{
 				width: 30%;
 			}
 			@media (max-width: 900px){
+				width: 80%;
+				margin: 0 auto 30px;
+			}
+			@media (max-width: 540px){
 				width: 100%;
 				padding: 30px 20px;
 				margin-bottom: 30px;
@@ -1557,10 +1586,15 @@ footer{
 				text-align: left;
 				font-size: 0.9375rem;
 				line-height: 1.8;
-				font-weight: 400;
+				font-weight: 500;
 				letter-spacing: -0.05em;
+				@media (max-width: 900px){
+					text-align: center;
+				}
 				@media (max-width: 540px){
+					text-align: left;
 					font-size: 0.8125rem;
+					line-height: 1.375rem;
 				}
 			}
 		}
@@ -1574,6 +1608,15 @@ footer{
 		@media (max-width: 540px){
 			padding: 60px 0;
 		}
+		.splide__slide{
+			width: 28.5% !important;
+			@media (max-width: 1062px){
+				width: 36% !important; 
+			}
+			@media (max-width: 540px){
+				width: 50.7% !important; 
+			}
+		}
 	}
 }
 
@@ -1584,17 +1627,24 @@ footer{
 	font-family: $base_font;
 	width: 100%;
 	padding: 120px 20px;
-	height: 85rem;
 	background-color: $myPink;
 	@media (max-width: 540px){
 		padding: 60px 20px;
-		height: auto;
+		//height: auto;
 	}
 	.print_wbox{
 		max-width: 1280px;
 		margin: 0 auto;
+		@media (max-width: 1200px){
+			margin: 11rem auto 0;
+		}
 		.price_Box{
+			position: absolute;
+			top: 7.2rem;
 			display: block;
+			@media (max-width: 540px){
+				top: 4rem;
+			}
 		}
 		h2{
 			@include ft_title;
@@ -1610,133 +1660,139 @@ footer{
 			}
 		}
 		.price_flex{
-			position: absolute;
-			top: 8rem;
 			display: flex;
 			justify-content: space-between;
 			align-items: flex-end;
 			text-align: center;
 			width: 100%;
 			max-width: 1260px;
-			@media (max-width: 1300px){
-				flex-wrap:wrap;
-				position: static;
-				transform: none;
-			}
-			@media (max-width: 540px){
-				display: block;
+			// @media (max-width: 1300px){
+			// 	flex-wrap: wrap;
+			// 	position: static;
+			// 	transform: none;
+			// 	justify-content: space-around;
+			// 	margin: 10rem auto 3rem;
+			// }
+			@media (max-width: 1200px){
+				display: grid;
 				margin: 60px 0 0 0;
 			}
 			li{
 				// ----- pc image-size -----
-				&:first-child{
+				&.price01{
 					width: 12.3%;
 				}
-				&:nth-child(2){
+				&.price02{
 					width: 17.5%;
 				}
-				&:nth-child(3){
+				&.price03{
 					width: 14.2%;
 				}
-				&:nth-child(4){
+				&.price04{
 					width: 18%;
 				}
-				&:nth-child(5){
-					width: 11.5%;
-				}
-				&:last-child{
+				&.price05{
 					width: 29.8%;
 				}
 				// ----- pc image-size END -----
 	
 				// ----- tab image-size -----
-				@media (max-width: 1300px){
-					margin-bottom: 3.75rem;
-					&:first-child{
-						width: 30%;
-						img{
-							width: 40%;
-						}
-					}
-					&:nth-child(2){
-						width: 30%;
-						img{
-							width: 58%;
-						}
-					}
-					&:nth-child(3){
-						width: 30%;
-						img{
-							width: 58%;
-						}
-					}
-					&:nth-child(4){
-						width: 30%;
-						img{
-							width: 100%;
-						}
-					}
-					&:nth-child(5){
-						width: 30%;
-						img{
-							width: 58%;
-						}
-					}
-					&:last-child{
-						width: 30%;
-						img{
-							width: 58%;
-						}
-					}
-				}
-				// ----- tab image-size END -----
+				// @media (max-width: 1300px){
+				// 	&.price01{
+				// 		width: 30%;
+				// 		img{
+				// 			width: 40%;
+				// 		}
+				// 	}
+				// 	&.price02{
+				// 		width: 30%;
+				// 		img{
+				// 			width: 58%;
+				// 		}
+				// 	}
+				// 	&.price03{
+				// 		width: 30%;
+				// 		img{
+				// 			width: 58%;
+				// 		}
+				// 	}
+				// 	&.price04{
+				// 		width: 30%;
+				// 		img{
+				// 			width: 100%;
+				// 		}
+				// 	}
+				// 	&.price05{
+				// 		width: 30%;
+				// 		img{
+				// 			width: 58%;
+				// 		}
+				// 	}
+				// }
+				// // ----- tab image-size END -----
 	
 				// ----- sp image-size -----
-				@media (max-width: 540px){
-					&:first-child{
+				@media (max-width: 1200px){
+					margin-bottom: 60px;
+					&.price01{
 						width: 100%;
+						order: 1;
 						img{
 							width: 38.7%;
 						}
 					}
-					&:nth-child(2){
+					&.price02{
 						width: 100%;
+						order: 3;
 						img{
 							width: 54.8%;
 						}
 					}
-					&:nth-child(3){
+					&.price03{
 						width: 100%;
+						order: 4;
 						img{
 							width: 44.7%;
 						}
 					}
-					&:nth-child(4){
+					&.price04{
 						width: 100%;
+						order: 2;
 						img{
 							width: 56.6%;
 						}
 					}
-					&:last-child{
+					&.price05{
 						margin-bottom: 0;
 						width: 100%;
+						order: 5;
 						img{
-							width: 93.5%;
+							width: 90%;
 						}
 					}
 				}
 				// ----- sp image-size END -----
 	
 				// ----- sp side -----
-				@media (max-width: 540px){
+				@media (max-width: 1200px){
 					.price_detail_flex{
 						display: flex;
 						justify-content: space-around;
 						.side_img_sp{
+							width: 40%;
+						}
+						.side_txt_sp{
+							width: 37%;
+						}
+					}
+				}
+				@media (max-width: 540px){
+					.price_detail_flex{
+						.side_img_sp{
 							width: 50%;
 						}
 						.side_txt_sp{
-							width: 50%;
+							width: 47%;
 						}
 					}
 				}
@@ -1749,17 +1805,17 @@ footer{
 					font-weight: 500;
 					line-height: 1;
 					letter-spacing: 0.075em;
-					margin: 30px 0;
-					@media (max-width: 540px){
+					margin: 25px 0;
+					@media (max-width: 1200px){
 						font-size: 1.5rem;
 						margin: 0 0 10px 0;
 					}
 				}
 				.size_box{
-					padding: 15px 0;
+					padding: 20px 0 0;
 					margin: 0 auto;
 					border-top: 1px solid #fff;
-					@media (max-width: 540px){
+					@media (max-width: 1200px){
 						padding: 10px 0;
 					}
 					.size_txt{
@@ -1769,6 +1825,9 @@ footer{
 						text-align: left;
 						line-height: 1.3;
 						letter-spacing: 0.1em;
+						@media (max-width: 1200px){
+							font-size: 1em;
+						}
 						@media (max-width: 540px){
 							font-size: 0.875rem;
 							line-height: 1.5;
@@ -1778,10 +1837,10 @@ footer{
 				//only SP
 				.price_txt_box{
 					display: none;
-					@media (max-width: 540px){
+					@media (max-width: 1200px){
 						display: block;
 						border-top: 1px solid #fff;
-						padding-top: 10px;
+						padding-top: 6px;
 					}
 					.price_txt{
 						color: #FFF;
@@ -1812,12 +1871,12 @@ footer{
 			}
 	}
 	.price_table {
-		margin: 35rem auto 0;
+		margin: 100px auto 0;
 		width: 85%;
 		text-align: center;
 		border-collapse: collapse;
 		border-spacing: 0;
-		@media (max-width: 640px){
+		@media (max-width: 1200px){
 			display: none;
 		}
 		th{
@@ -1905,7 +1964,7 @@ footer{
 			margin: 0 0 100px 0;
 		}
 	    li{
-			width: 25%;
+			width: 27%;
 			color: #fff;
 			font-size: 1.125rem;
 		    font-weight: 500;
@@ -1959,6 +2018,9 @@ footer{
 	padding: 120px 0 120px;
 	background-color: $myPurple;
 	margin: 0 auto;
+	@media (max-width: 1062px){
+		padding: 60px 40px 60px;
+	}
 	@media (max-width: 540px){
 		padding: 60px 0 60px;
 	}
@@ -1979,13 +2041,19 @@ footer{
 		border-radius: 15px;
 		dt {
 			color: #666666;
-			font-size: 0.875rem;
+			font-size: 1rem;
 			font-weight: 500;
+			@media (max-width: 540px){
+				font-size: 0.875rem;
+			}
 		}
 		dd{
 			color: #3d3d3d;
-			font-size: 0.875rem;
+			font-size: 1rem;
 			font-weight: 500;
+			@media (max-width: 540px){
+				font-size: 0.875rem;
+			}
 		}
 		&:hover{
 			background-color: $myIvory;
@@ -1998,7 +2066,7 @@ footer{
 		}
 		@media (max-width: 540px){
 			margin: 15px 15px;
-			padding: 20px 40px 20px 20px;
+			padding: 20px 40px 20px 15px;
 			background-position: right 15px center;
 		}
 	}
@@ -2051,13 +2119,16 @@ footer{
 		}
 		a {
 			color: #fff;
-			font-size: 0.875rem;
+			font-size: 1rem;
 			font-weight: 500;
 			letter-spacing: 0.1em;
 			padding: 0 0 5px 0;
 			border-bottom: solid 1px #fff;
 			&:hover {
 				opacity: 0.5;
+			}
+			@media (max-width: 540px){
+				font-size: 0.875rem;
 			}
 		}
 	}
@@ -2068,6 +2139,9 @@ footer{
 	font-family: $base_font;
 	padding: 120px 0 120px;
 	background-color: #fff;
+	@media (max-width: 1062px){
+		padding: 60px 40px 60px;
+	}
 	@media (max-width: 540px){
 		padding: 60px 0 60px;
 	}
@@ -2100,7 +2174,7 @@ footer{
 			color: $myBlack;
 			@media (max-width: 767px){
 				padding: 10px;
-				margin-bottom: 20px;
+				margin-bottom: 10px;
 			}
 		}
 	}
