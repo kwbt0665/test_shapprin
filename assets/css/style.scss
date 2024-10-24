@@ -790,6 +790,7 @@ header{
 						@media (max-width: 1062px){
 							display: block;
 							color: #fff;
+							transition: all 0s;
 						}
 						&::after{
 							display: none;
@@ -854,19 +855,19 @@ header{
 				transition: all .15s;
 				box-sizing: border-box;
 				position: absolute;
-				left: 30%;
+				left: 29.5%;
 				width: 17px;
 				height: 2px;
 				background-color: $myWhite;
 				border-radius: 2px;
 				&:first-child{
-					top: 12px;
+					top: 13px;
 				}
 				&:nth-of-type(2){
-					top: 18px;
+					top: 19px;
 				}
 				&:nth-of-type(3){
-					top: 24px;
+					top: 25px;
 				}
 			}
 			&.active{
@@ -1215,7 +1216,7 @@ footer{
 			background-repeat: no-repeat;
 		 }
 		.img01 {
-			animation: toggleVisibility 2s infinite;
+			//animation: toggleVisibility 2s infinite;
 			background-image: url(../img/topimg_01.jpg);
 			z-index: 2;
 			@media (max-width: 650px){
@@ -1401,20 +1402,17 @@ footer{
 			display: flex;
 			align-items: center;
 			justify-content: space-between;
-			@media (max-width: 1160px){
-
-			}
-			@media (max-width: 540px){
-
-			}
-			@media (max-width: 470px){
-
-			}
 			.feature_img_sp{
 				display: none;
-				@media (max-width: 540px){
+				@media (max-width: 850px){
 					display: block;
 					margin: 60px 0;
+					text-align: center;
+					img{
+						width: 80%;
+					}
+				}
+				@media (max-width: 540px){
 					img{
 						width: 100%;
 					}
@@ -1426,7 +1424,7 @@ footer{
 				@media (max-width: 1062px){
 					width: 70%;
 				}
-				@media (max-width: 540px){
+				@media (max-width: 850px){
 					display: none;
 				}
 			}
@@ -2242,6 +2240,83 @@ footer{
 			width: 100%;
 			margin: auto;
 			padding: 0 16px;
+		}
+		.mfp_menu{
+			h1{
+				text-align: center;
+				font-family:$base_font;
+				font-weight: 400;
+				font-size: 1.4rem;
+				margin-bottom: 80px;
+				@media (max-width: 767px){
+					text-align: left;
+					font-size: 1.1rem;
+					margin-bottom: 40px;
+				}
+			}
+			hr{
+				border-top: dotted 1px #ddd;
+				margin-bottom: 3rem;
+			}
+			nav{
+				margin-top: 80px;
+				text-align: center;
+				@media (max-width: 991px){
+					margin-top: 60px;
+				}
+				@media (max-width: 767px){
+					margin-top: 40px;
+				}
+				ul{
+					display: inline-block;
+					overflow: hidden;
+					li{
+						float: left;
+						font-weight: 600;
+						font-size: 18px;
+						margin-right: 40px;
+						width: 280px;
+						@media (max-width: 767px){
+							font-size: 15px;
+							width: 240px;
+							float: none;
+							margin: 0 0 20px 0;
+						}
+						&:last-child{
+							margin: 0;
+						}
+						&.active{
+							a{
+								border-color: $myGreen;
+								background-color: $myGreen;
+							}
+						}
+						a{
+							color: #fff;
+							background-color: #bbb;
+							display: block;
+							padding: 15px 0;
+							border-radius: 6px;
+							text-align: center;
+							border: solid 3px #bbb;
+							&:hover{
+								background-color: $myGreen;
+							}
+							span{
+								display: inline-block;
+							}
+							img{
+								display: inline-block;
+								width: 50px;
+								margin-right: 15px;
+								@media (max-width: 767px){
+									width: 25px;
+								}
+							}
+						}
+					}
+				}
+			}
 		}
 		.faq_container{
 			max-width: 1000px;
