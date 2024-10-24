@@ -62,6 +62,46 @@
     <meta name="theme-color" content="#1BBC9D">
 	<!-- Loader -->
 	<script src="assets/js/pace.min.js"></script>
+	<script>
+	 window.difyChatbotConfig = {
+	  token: 'swLawzAQSHaQNxZU',
+	  baseUrl: 'https://llm.m-inject.info'
+	 }
+	</script>
+	<script
+	 src="https://llm.m-inject.info/embed.min.js"
+	 id="swLawzAQSHaQNxZU"
+	 defer>
+	</script>
+	<style>
+	  #dify-chatbot-bubble-button {
+		background-color: #1C64F2 !important;
+		right: 20px !important;
+		bottom: 20px !important;
+	  }
+	</style>
+	
+	<style>
+		/* フローティングボタンのスタイル */
+		.chat-button {
+			position: fixed;         /* 画面に固定する */
+			bottom: 20px;            /* 画面の下からの距離 */
+			right: 20px;             /* 画面の右からの距離 */
+			background-color: #008CBA; /* ボタンの背景色 */
+			color: white;            /* ボタンのテキスト色 */
+			border: none;            /* ボタンの境界線をなしに */
+			padding: 15px 20px;      /* ボタン内の余白 */
+			border-radius: 50px;     /* ボタンの角を丸くする */
+			font-size: 16px;         /* テキストサイズ */
+			cursor: pointer;         /* マウスカーソルをポインタに */
+			box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3); /* ボタンに影を追加 */
+			z-index: 1000;           /* ボタンを他の要素より前面に表示 */
+		}
+	
+		.chat-button:hover {
+			background-color: #005f73; /* ホバー時に色を変える */
+		}
+	</style>
 </head>
 
 <body id="top">
@@ -87,16 +127,16 @@
 								<li class="dropdown onlypc">
 									<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">フォトコンテンツの作り方<span class="caret"></span></a>
 									<ul class="dropdown-menu">
-										<li><a href="#" class="txt_wh" target="_blank">デザインフレームフォトコンテンツ</a></li>
-										<li><a href="#" class="txt_wh" target="_blank">カレンダーフォト</a></li>
+										<li><a href="howto_designframe.html" class="txt_wh" target="_blank">デザインフレームフォトコンテンツ</a></li>
+										<li><a href="howto_calendar.html" class="txt_wh" target="_blank">カレンダーフォト</a></li>
 									</ul>
 								</li>
 								<!--PC only END-->
 								<!--SP only-->
-								<li class="photo"><a href="#">デザインフレーム<br>フォトコンテンツの作り方</a></li>
-								<li class="calendar"><a href="#">カレンダーの作り方</a></li>
+								<li class="photo"><a href="howto_designframe.html">デザインフレーム<br>フォトコンテンツの作り方</a></li>
+								<li class="calendar"><a href="howto_calendar.html">カレンダーの作り方</a></li>
 								<!--SP only END-->
-								<li class="mfp"><a href="#">プリント方法</a></li>
+								<li class="mfp"><a href="mfp.html">プリント方法</a></li>
 								<li class="faq"><a href="faq.html">よくある質問</a></li>
 								<li class="shop"><a href="https://networkprint.ne.jp/search_store/map.html">店舗検索</a></li>
 							</ul>
@@ -328,8 +368,8 @@
 									<p class="size_txt">127mm×127mm</p>
 								</div>
 								<div class="price_txt_box">
-									<p class="price_txt">写真紙<span class="ml35">60</span><em>円</em></p>
-									<p class="price_txt">シール紙<span class="ml25">240</span><em>円</em></p>
+									<p class="price_txt">写真紙<span class="ml35">100</span><em>円</em></p>
+									<p class="price_txt">シール紙<span class="ml25">320</span><em>円</em></p>
 								</div>
 							</div>
 						</div>
@@ -475,7 +515,7 @@
 					</div>
 				</div>
 				<p class="stepBox_btn">
-					<a href="#">マルチコピー機の操作方法はこちら</a>
+					<a href="mfp.html">マルチコピー機の操作方法はこちら</a>
 				</p>
 			</div> 
 		</section>
@@ -518,7 +558,7 @@
 				</a>
 
 				<p class="article">
-					<a href="#">記事一覧はこちら</a>
+					<a href="article.html">記事一覧はこちら</a>
 				</p>
 			</div>
 		</section>
@@ -583,14 +623,14 @@
 						<nav>
 							<div class="ftCmn_menu_grv">
 								<ul>
-									<li><a href="#">デザインフレームフォトコンテンツの作り方</a></li>
-									<li><a href="#">カレンダーの作り方</a></li>
+									<li><a href="howto_designframe.html">デザインフレームフォトコンテンツの作り方</a></li>
+									<li><a href="howto_calendar.html">カレンダーの作り方</a></li>
 								</ul>
 								<ul>
-									<li><a href="#">プリント方法</a></li>
+									<li><a href="mfp.html">プリント方法</a></li>
 									<li><a href="faq.html">よくある質問</a></li>
 									<li><a href="https://networkprint.ne.jp/search_store/map.html">店舗検索</a></li>
-									<li><a href="privacy.html">プライバシーポリシー</a></li>
+									<li><a href="privacy_policy.html">プライバシーポリシー</a></li>
 								</ul>
 								<ul>
 									<li><a href="https://www.busica.co.jp/">運営会社</a></li>
@@ -656,6 +696,16 @@
 
 	</script>
 
+	<!-- TOP Animation -->
+	<script>
+		let isBox1Visible = true;
+		setInterval(() => {
+		document.querySelector('.img01').style.visibility = isBox1Visible ? 'visible' : 'hidden';
+		document.querySelector('.img02').style.visibility = isBox1Visible ? 'hidden' : 'visible';
+		isBox1Visible = !isBox1Visible;
+		}, 1000); // 1秒ごとに切り替え
+	</script>
+
 	<!-- Splide -->
 	<script src="assets/js/splide.min.js"></script>
 	<script src="assets/js/splide-extension-auto-scroll.min.js"></script>
@@ -717,7 +767,43 @@
 			splide_case.mount( window.splide.Extensions );
 		});
 	</script>
-
+	<button class="chat-button" id="chat-button" style="display:none;" onclick="startChat()">チャットを開始</button>
 </body>
+<script>
+function isAndroidWebView() {
+	var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+	// Androidデバイスでかつ、WebView ("wv") の場合に true を返す
+	if (userAgent.includes("Android")) {
+		return true; // Android WebViewからのアクセス
+	}
+	return false; // それ以外のアクセス
+}
+
+
+function delayedMethod() {
+	console.log("This method is executed after a delay.");
+	document.getElementById("dify-chatbot-bubble-button").remove();
+	document.getElementById("chat-button").style.display = "block";
+}
+
+if (isAndroidWebView()) {
+	console.log("This is an Android WebView.");
+	//alert("This is an Android WebView.");
+	
+	// 2000ミリ秒 (2秒) 後にdelayedMethodを実行
+	setTimeout(delayedMethod, 800);
+} else {
+	console.log("This is not an Android WebView.");
+}
+
+
+function startChat() {
+	alert("チャットを開始します!");
+	// 実際にはチャットウィンドウを開く等の処理を記述
+	window.open("https://llm.m-inject.info/chat/swLawzAQSHaQNxZU");
+	
+}
+</script>
 
 </html>
