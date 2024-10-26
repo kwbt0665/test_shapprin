@@ -656,11 +656,11 @@ header{
 	}
 }
 .hdCmn{
-	@include transition-normal-06;
+	//@include transition-normal-06;
 	padding: 15px;
 	height: 80px;
 	@media (max-width: 1062px){
-	    @include transition-normal-04;
+	    //@include transition-normal-04;
 		padding: 10px;
 		height: 60px;
 	}
@@ -696,7 +696,7 @@ header{
 			}
 	    }
 		.hdMenu{
-			@include transition-normal-02;
+			//@include transition-normal-02;
 			width: auto;
 			float: right;
 			display: none;
@@ -1439,6 +1439,21 @@ footer{
 	@media (max-width: 1160px){
 		padding: 60px 0;
 	}
+	.second_box_btn{
+		@include normal_btn;
+		margin: 60px 0 0 0;
+		text-align: center;
+		a{
+			background-image: url(../img/arrow_circle_right_white.svg);
+			background-color: #ceb341;
+			color:#fff;
+			&:hover{
+				background-image: url(../img/arrow_circle_right_black.svg);
+				background-color: $myIvory;
+				color: #000;
+			}
+		}
+	}
 	.second_box{
 		max-width: 1280px;
 		margin: 0 auto;
@@ -1508,6 +1523,21 @@ footer{
 	padding: 120px 0px;
 	@media (max-width: 1160px){
 		padding: 60px 0;
+	}
+	.third_box_btn{
+		@include normal_btn;
+		margin: 80px 0 0 0;
+		text-align: center;
+		a{
+			background-image: url(../img/arrow_circle_right_white.svg);
+			background-color: #50bcbc;
+			color: #fff;
+			&:hover{
+				background-image: url(../img/arrow_circle_right_black.svg);
+				background-color: $myIvory;
+				color: #000;
+			}
+		}
 	}
 	.third_box{
 		max-width: 1280px;
