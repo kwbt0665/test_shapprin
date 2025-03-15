@@ -1968,6 +1968,11 @@ footer{
 			font-size: 1.25rem;
 		}
 	}
+	.a3_info{
+		@media (max-width: 1200px){
+			display: none;
+		}
+	}
 
 	// hr{
 	// 	border-top: solid 2px #696969;
@@ -3889,9 +3894,9 @@ footer{
 .txt_link{
 	color: #fff;
 	// font-size: 1rem;
-	font-weight: 500;
+	font-weight: 600;
 	letter-spacing: 0.1em;
-	padding: 0 0 5px 0;
+	padding: 0 0 4px 0;
 	border-bottom: solid 1px #fff;
 	&:hover {
 		opacity: 0.5;
