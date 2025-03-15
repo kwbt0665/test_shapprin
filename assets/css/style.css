@@ -1534,17 +1534,26 @@ footer .copy {
   }
 }
 .print_price .print_wbox .price_flex {
+  margin-top: 14rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: flex-end;
+  flex-wrap: wrap;
   text-align: center;
   width: 100%;
   max-width: 1260px;
+  gap: 150px;
+}
+@media (max-width: 1230px) {
+  .print_price .print_wbox .price_flex {
+    gap: 140px;
+  }
 }
 @media (max-width: 1200px) {
   .print_price .print_wbox .price_flex {
+    margin-top: 11rem;
     display: grid;
-    margin: 60px 0 0 0;
+    gap: 60px;
   }
 }
 .print_price .print_wbox .price_flex li.price01 {
@@ -1562,6 +1571,14 @@ footer .copy {
 .print_price .print_wbox .price_flex li.price05 {
   width: 29.8%;
 }
+@media (min-width: 1201px) {
+  .print_price .print_wbox .price_flex li.price05 .size_box {
+    margin-bottom: 2.8rem;
+  }
+}
+.print_price .print_wbox .price_flex li.price06 {
+  width: 38%;
+}
 @media (max-width: 1200px) {
   .print_price .print_wbox .price_flex li {
     margin-bottom: 60px;
@@ -1571,42 +1588,49 @@ footer .copy {
     order: 1;
   }
   .print_price .print_wbox .price_flex li.price01 img {
-    width: 38.7%;
+    width: 25.7%;
   }
   .print_price .print_wbox .price_flex li.price02 {
     width: 100%;
     order: 3;
   }
   .print_price .print_wbox .price_flex li.price02 img {
-    width: 54.8%;
+    width: 39.8%;
   }
   .print_price .print_wbox .price_flex li.price03 {
     width: 100%;
     order: 4;
   }
   .print_price .print_wbox .price_flex li.price03 img {
-    width: 44.7%;
+    width: 29.7%;
   }
   .print_price .print_wbox .price_flex li.price04 {
     width: 100%;
     order: 2;
   }
   .print_price .print_wbox .price_flex li.price04 img {
-    width: 56.6%;
+    width: 39.6%;
   }
   .print_price .print_wbox .price_flex li.price05 {
-    margin-bottom: 0;
     width: 100%;
     order: 5;
   }
   .print_price .print_wbox .price_flex li.price05 img {
-    width: 90%;
+    width: 60%;
+  }
+  .print_price .print_wbox .price_flex li.price06 {
+    margin-bottom: 60px;
+    width: 100%;
+    order: 6;
+  }
+  .print_price .print_wbox .price_flex li.price06 img {
+    width: 87%;
   }
 }
 @media (max-width: 1200px) {
   .print_price .print_wbox .price_flex li .price_detail_flex {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
   }
   .print_price .print_wbox .price_flex li .price_detail_flex .side_img_sp {
     width: 40%;
@@ -1617,10 +1641,10 @@ footer .copy {
 }
 @media (max-width: 540px) {
   .print_price .print_wbox .price_flex li .price_detail_flex .side_img_sp {
-    width: 50%;
+    width: 55%;
   }
   .print_price .print_wbox .price_flex li .price_detail_flex .side_txt_sp {
-    width: 47%;
+    width: 43%;
   }
 }
 .print_price .print_wbox .price_flex li .sheet_title {
@@ -1665,6 +1689,14 @@ footer .copy {
   .print_price .print_wbox .price_flex li .size_box .size_txt {
     font-size: 0.875rem;
     line-height: 1.5;
+  }
+}
+.print_price .print_wbox .price_flex li .size_box .a3_onlytxt {
+  display: block;
+}
+@media (max-width: 1200px) {
+  .print_price .print_wbox .price_flex li .size_box .a3_onlytxt {
+    display: none;
   }
 }
 .print_price .print_wbox .price_flex li .price_txt_box {
@@ -4029,6 +4061,31 @@ footer .copy {
   .br_pc {
     display: none;
   }
+}
+
+/* -------- common parts -------- */
+.txt_link {
+  color: #fff;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  padding: 0 0 5px 0;
+  border-bottom: solid 1px #fff;
+}
+.txt_link:hover {
+  opacity: 0.5;
+}
+@media (max-width: 540px) {
+  .txt_link {
+    padding: 0 0 1px 0;
+  }
+}
+
+.mt20 {
+  margin-top: 20px;
+}
+
+.tl_left {
+  text-align: left !important;
 }
 
 /* -------- 店舗検索 -------- */
